@@ -9,3 +9,8 @@ services:
   second:
     image: alpine
     command: ash -c "ping -c 1 first_container && tail -f /dev/null"
+
+  helloworldinc:
+      build: .
+      image: jimhelloworld
+      container_name: helloworldinc
