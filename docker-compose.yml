@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  first:
+    image: alpine
+    command: ash -c "sleep 5 && tail -f /dev/null"
+    container_name: first_container
+
+  second:
+    image: alpine
+    command: ash -c "ping -c 1 first_container && tail -f /dev/null"
